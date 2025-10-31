@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soma de Dois Números</title>
+  <style> 
+        body{
+          font-family: Arial,Sans-Serif;
+          background-color:white;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .container{
+          background: white;
+          padding:20px;
+          border-radius:10px;
+          text-align: center;
+          width: 250px;
+        }
+        
+        input{
+          width:100%;
+          padding:8px;
+          margin: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: center;
+        }
+        button {
+               font-family: arial;
+               background-color: blue;
+               cursor:pointer;
+               color: white;
+               width: 100%;
+               padding: 8px;
+               margin: 5px;
+               border:10px solid;
+              border-radius: 5px;
+               text-align: center;
+              }
+          p {
+              font-family: arial;
+              margin-top:20px;
+              font-weight: bold;
+              text-align: center;
+            }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Soma de Dois Números</h2>
+      <input type="number" id="Numero1" placeholder="Digite o primeiro número">
+      <input type="number" id="Numero2" placeholder="Digite o segundo número">
+      <button onclick="somar()">SOMAR</button>
+      <p id="resultado">O RESULTADO É:</p>
+    </div>
+    <script>
+      function somar() {
+      let n1 = parseFloat(document.getElementById('Numero1').value);
+      let n2 = parseFloat(document.getElementById('Numero2').value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById('resultado').textContent="Digite dois números";
+      } else {
+        let soma = n1 + n2;
+        document.getElementById('resultado').textContent="Resultado: " + soma;
+      }
+    }
+    </script>
+  </body>
+  </html>
